@@ -8,13 +8,14 @@
 }
 .index_cate {
   display: flex;
+  justify-content: space-between;
 }
 .index_cate navigator {
   padding: 20rpx;
   flex: 1;
 }
 .index_cate navigator image {
-  width: 100%;
+  width: 85%;
 }
 .index_floor .floor {
   overflow: hidden;

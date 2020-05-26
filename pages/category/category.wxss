@@ -11,18 +11,33 @@ page {
 }
 .category .category-container .left_menu {
   flex: 3;
+  background-color: #f6f6f6;
 }
 .category .category-container .left_menu .menu-item {
-  height: 80rpx;
-  line-height: 80rpx;
+  height: 100rpx;
   text-align: center;
-  font-size: 32rpx;
+  font-size: 30rpx;
   border-bottom: 2rpx solid #d8dad7;
   border-radius: 5rpx;
+  padding: 30rpx 5rpx;
 }
 .category .category-container .left_menu .active {
   color: var(--themeColor);
   font-weight: bold;
+  position: relative;
+  background-color: #ffffff;
+}
+.category .category-container .left_menu .active:after {
+  content: "";
+  position: absolute;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rpx;
+  height: 40rpx;
+  width: 7rpx;
+  background-color: var(--themeColor);
+  border-radius: 20rpx;
 }
 .category .category-container .right_content {
   flex: 8;
@@ -36,12 +51,13 @@ page {
 }
 .category .category-container .right_content .goods_group .goods_title {
   display: flex;
+  background-color: #f6f6f6;
   align-items: center;
   justify-content: center;
-  height: 80rpx;
+  height: 60rpx;
   color: #2f2f2f;
   margin: 20rpx 0;
-  font-size: 40rpx;
+  font-size: 32rpx;
   font-weight: bold;
 }
 .category .category-container .right_content .goods_group .goods_title .delimiter {
@@ -60,12 +76,12 @@ page {
   width: 33.33%;
 }
 .category .category-container .right_content .goods_group .goods_list navigator image {
-  width: 70%;
+  width: 65%;
 }
 .category .category-container .right_content .goods_group .goods_list navigator .goods_name {
   display: flex;
   align-items: center;
   height: 80rpx;
   font-size: 28rpx;
-  font-weight: bold;
+  color: #666;
 }
