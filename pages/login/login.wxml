@@ -1,0 +1,4 @@
+<!--pages/login/login.wxml-->
+<button type="primary" open-type="getUserInfo" bindgetuserinfo="handleGetUserUnfo" plain>
+    登录授权
+</button>

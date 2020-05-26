@@ -1,0 +1,73 @@
+/* pages/category/category.wxss */
+page {
+  height: 100%;
+}
+.category {
+  height: 100%;
+  .category-container {
+    display: flex;
+    height: calc(100vh - 90rpx);
+    //左边菜单样式
+    .left_menu {
+      flex: 3;
+      .menu-item {
+        height: 80rpx;
+        line-height: 80rpx;
+        text-align: center;
+        font-size: 32rpx;
+        border-bottom: 2rpx solid #d8dad7;
+        border-radius: 5rpx;
+      }
+      .active {
+        color: var(--themeColor);
+        font-weight: bold;
+      }
+    }
+    //右边内容区域样式
+    .right_content {
+      flex: 8;
+      padding-left: 30rpx;
+      background-color: #ffffff;
+      .goods_group {
+        border-left: 2rpx solid #f9f9f9;
+        border-top: 5rpx solid #f9f9f9;
+        padding-bottom: 20rpx;
+        .goods_title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 80rpx;
+          color: #2f2f2f;
+          margin: 20rpx 0;
+          font-size: 40rpx;
+          font-weight: bold;
+          .delimiter {
+            padding: 0 10rpx;
+            color: #ccc;
+          }
+        }
+        .goods_list {
+          display: flex;
+          flex-wrap: wrap;
+          navigator {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 33.33%;
+            image {
+              width: 70%;
+            }
+            .goods_name {
+              display: flex;
+              align-items: center;
+              height: 80rpx;
+              font-size: 28rpx;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

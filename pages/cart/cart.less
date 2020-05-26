@@ -1,0 +1,146 @@
+/* pages/cart/cart.wxss */
+
+.revice_address_row {
+  .address-btn {
+    padding: 20rpx;
+    button {
+      width: 60%;
+    }
+  }
+  .address_info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+  }
+}
+.cart-content {
+  .cart_title {
+    height: 90rpx;
+    font-size: 42rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 20rpx;
+    border-top: 2rpx solid var(--themeColor);
+    border-bottom: 2rpx solid var(--themeColor);
+  }
+  .cart_main {
+    .cart_null {
+      margin-top: 100rpx;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      .cart_null_text {
+        font-size: 40rpx;
+        color: var(--themeColor);
+        text-align: center;
+      }
+      image {
+        width: 500rpx;
+        position: absolute;
+        left: 50%;
+        top: 100rpx;
+        transform: translateX(-50%);
+      }
+    }
+
+    .cart_item {
+      display: flex;
+      height: 200rpx;
+      padding: 20rpx;
+      border-bottom: 1rpx solid #d8dad7;
+      .cart_checkbox_wrap {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cart_img_wrap {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10rpx;
+        image {
+          width: 80%;
+        }
+      }
+
+      .cart_info_wrap {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .goods_name {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          color: #666;
+        }
+
+        .cart_price_wrap {
+          display: flex;
+          justify-content: space-between;
+          .cart_price {
+            color: var(--themeColor);
+            font: 32rpx;
+          }
+          .cart_num_tool {
+            display: flex;
+            .num_edit {
+              width: 50rpx;
+              height: 50rpx;
+              text-align: center;
+              border: 2rpx solid #e6e6e6;
+            }
+            .goods_num {
+              display: flex;
+              align-items: center;
+              margin: 0 10rpx;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//底部工具栏
+.footer_tool {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  padding-left: 20rpx;
+  border-top: 1px solid #f8f8f8;
+  background-color: #fefefe;
+  .all_check {
+    flex: 2;
+  }
+  .total_price {
+    text-align: right;
+    flex: 4;
+    margin-right: 20rpx;
+    .total {
+      font-weight: bold;
+      font-size: 32rpx;
+      text {
+        color: var(--themeColor);
+      }
+    }
+  }
+  .pay {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 40rpx;
+    color: white;
+    background-color: var(--themeColor);
+  }
+}

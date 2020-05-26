@@ -1,0 +1,20 @@
+<!-- pages/collect/collect.wxml -->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handletabsItemChange"></Tabs>
+<view class="collect">
+    <!-- 商品信息 -->
+    <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="collect_goods" wx:for="{{collectGoods}}" wx:key="goods_id">
+        <block wx:if="{{collectGoods.length!==0}}">
+            <view class="goods_img">
+                <image mode="widthFix" src="{{item.goods_small_logo}}" />
+            </view>
+            <view class="goods_info">
+                <view class="goods_title">{{item.goods_name}}</view>
+                <view class="price">￥：{{item.goods_price}}</view>
+            </view>
+        </block>
+    </navigator>
+    <!-- 如果收藏页没有商品就显示一张图片 -->
+    <block wx:if="{{collectGoods.length===0}}">
+    <view class="no_collection">暂无收藏</view>  
+    </block>
+</view>

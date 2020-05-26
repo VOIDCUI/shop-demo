@@ -1,0 +1,51 @@
+/* pages/search/search.wxss */
+page {
+  background-color: #dbdedb;
+}
+//搜索框
+.search_row {
+  display: flex;
+  height: 80rpx;
+  margin: 20rpx;
+  input {
+    flex: 8;
+    border-radius: 15rpx;
+    height: 100%;
+    margin-right: 20rpx;
+    padding-left: 20rpx;
+    background-color: #ffffff;
+    color: #666;
+    font-size: 30rpx;
+  }
+  button {
+    border-radius: 15rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    flex: 1;
+    height: 100%;
+    margin: 0rpx;
+    padding: 0rpx 30rpx;
+    font-size: 28rpx;
+  }
+}
+//搜索内容
+.content {
+  padding: 10rpx 20rpx;
+  view {
+    border-radius: 10rpx;
+    margin-top: 10rpx;
+    padding: 0rpx 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d8dad7;
+
+    // 超出部分用 ... 表示
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+}

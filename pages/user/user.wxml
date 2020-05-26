@@ -1,0 +1,73 @@
+<!-- pages/user/user.wxml -->
+<view class="user_info_wrap">
+    <view class="user_img_wrap">
+        <view wx:if="{{userInfo.nickName}}">
+            <image class="user_bg" src="{{userInfo.avatarUrl}}" mode="widthFix" />
+            <view class="user_info">
+                <image class="user_inco" src="{{userInfo.avatarUrl}}" />
+                <view class="user_name">{{userInfo.nickName}}</view>
+            </view>
+        </view>
+        <view wx:else class="user_btn">
+            <navigator url="/pages/login/login">登录</navigator>
+        </view>
+    </view>
+</view>
+<!-- 主要内容 -->
+<view class="user_content">
+    <!-- 我的收藏 -->
+    <view class="user_main">
+        <view class="collection">
+            <view class="item">
+                <text class="num">0</text>
+                <text class="text" bindtap="commonToast">收藏的店铺</text>
+            </view>
+            <navigator url="/pages/collect/collect" class="item">
+                <text class="num">{{collectNum}}</text>
+                <text class="text">收藏的商品</text>
+            </navigator>
+            <view class="item">
+                <text class="num">0</text>
+                <text class="text" bindtap="commonToast">关注的商品</text>
+            </view>
+            <view class="item">
+                <text class="num">0</text>
+                <text class="text" bindtap="commonToast">我的足迹</text>
+            </view>
+        </view>
+        <!-- 我的订单 -->
+        <view class="user_order">
+            <view class="my">我的订单</view>
+            <view class="order">
+                <navigator url="/pages/order/order?type=1" class="item">
+                    <view class="iconfont icon-rejected-order"></view>
+                    <text>全部订单</text>
+                </navigator>
+                <navigator url="/pages/order/order?type=2" class="item">
+                    <view class="iconfont icon-packaging"></view>
+                    <text>待付款</text>
+                </navigator>
+                <navigator url="/pages/order/order?type=3" class="item">
+                    <view class="iconfont icon-packing-labeling"></view>
+                    <text>待收货</text>
+                </navigator>
+                <navigator url="/pages/order/order?type=4" class="item">
+                    <view class="iconfont icon-inquiry-template"></view>
+                    <text>退款/退货</text>
+                </navigator>
+            </view>
+        </view>
+        <view class="goods_address" bindtap="commonToast">收货地址管理</view>
+        <view class="footer">
+            <view class="item customer" bindtap="commonToast">
+                <text>联系客服</text>
+                <text>400-618-66888</text>
+            </view>
+            <view class="item">
+                <navigator bindtap="commonToast">意见反馈</navigator>
+            </view>
+            <view class="item">关于我们</view>
+            <view class="item" bindtap="commonToast">把应用程序推荐给其他人</view>
+        </view>
+    </view>
+</view>
